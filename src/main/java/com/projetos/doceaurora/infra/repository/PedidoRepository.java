@@ -12,14 +12,10 @@ import java.util.Optional;
 public interface PedidoRepository extends JpaRepository<Pedido, Long> {
 
     // Encontra pedidos por ID do cliente
-    List<Pedido> findByClienteId(Long clienteId);
+    List<Pedido> findByCliente_Id(Long clienteId);
 
     // Encontra um pedido pelo ID
     Optional<Pedido> findById(Long id);
 
-    // Encontra pedidos dentro de um intervalo de datas
-    List<Pedido> findByDataPedidoBetween(Date dataInicio, Date dataFim);
-
-    // Encontra pedidos por status
     List<Pedido> findByStatus(String status);
 }

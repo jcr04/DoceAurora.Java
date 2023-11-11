@@ -2,6 +2,8 @@ package com.projetos.doceaurora.domain.entity;
 
 import jakarta.persistence.*;
 
+import java.util.Date;
+
 @Entity
 @Table(name = "pedido")
 public class Pedido {
@@ -18,6 +20,13 @@ public class Pedido {
 
     @Column(name = "preco_total")
     private double precoTotal;
+
+    @ManyToOne
+    @JoinColumn(name = "cliente_id")
+    private Cliente cliente;
+
+    @Column(name = "status")
+    private String status;
 
     // Getters e Setters
 }
