@@ -1,9 +1,9 @@
 package com.projetos.doceaurora.domain.entity;
 
 import jakarta.persistence.*;
+import lombok.Getter;
 
-import java.util.Date;
-
+@Getter
 @Entity
 @Table(name = "pedido")
 public class Pedido {
@@ -27,6 +27,34 @@ public class Pedido {
 
     @Column(name = "status")
     private String status;
+
+    public Pedido() {
+        this.precoTotal = precoTotal;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public void setIdProduto(Long idProduto) {
+        this.idProduto = idProduto;
+    }
+
+    public void setQuantidade(int quantidade) {
+        this.quantidade = quantidade;
+    }
+
+    public void setPrecoTotal(double precoTotal) {
+        this.precoTotal = precoTotal;
+    }
+
+    public void setCliente(Cliente cliente) {
+        this.cliente = cliente;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
 
     // Getters e Setters
 }

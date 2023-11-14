@@ -34,8 +34,13 @@ public class ProdutoService {
     @Transactional
     public Produto criarProduto(ProdutoDTO produtoDTO) {
         Produto produto = new Produto();
+        produto.setNome(produtoDTO.getNome());
+        produto.setPreco(produtoDTO.getPreco());
+        produto.setDescricao(produtoDTO.getDescricao());
         return produtoRepository.save(produto);
     }
+
+
 
     @Transactional
     public Produto atualizarProduto(Long id, ProdutoDTO produtoDTO) {
