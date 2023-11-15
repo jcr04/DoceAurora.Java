@@ -30,7 +30,10 @@ A Doce Aurora API é uma interface de programação de aplicativos projetada par
 - **Atualizar Cliente**: Atualiza informações de um cliente existente.
 - **Deletar Cliente**: Remove um cliente da base de dados.
 
-## Tecnologias Utilizadas
+### Endpoint em uso:
+* - Criar Pedidos (POST):
+* - ![Screenshot_13](https://github.com/jcr04/DoceAurora.Java/assets/70778525/348d1fa5-0543-4f35-8701-a71f709fd49f)
+
 
 - Spring Boot
 - Java 17
