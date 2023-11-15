@@ -11,7 +11,7 @@ public class PedidoDTO {
     private List<Long> idsProdutos;
     private double precoTotal;
     @Getter
-    private Long clienteId; // Adiciona o campo clienteId
+    private Long clienteId;
     @Getter
     private String status;
 
